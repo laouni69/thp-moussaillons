@@ -1,0 +1,26 @@
+<h1>Modifier mes informations</h1>
+
+<%=form_tag corsair_path(@corsair), method: :put do %>
+  
+<%= label_tag 'firstname', 'Firstname'%>
+<%= text_field_tag 'corsair[firstname]'%>
+
+<%= label_tag 'age', 'Age:'%>
+<%= text_field_tag 'corsair[age]'%>
+
+<%= label_tag 'bio', 'Bio:'%>
+<%= text_field_tag 'corsair[bio]'%>
+
+<%= label_tag 'slack_handle', 'Slack_handle:'%>
+<%= text_field_tag 'corsair[slack_handle]'%>
+
+<%= label_tag 'github_handle', 'Github_handle:'%>
+<%= text_field_tag 'corsair[github_handle]'%>
+
+<%= submit_tag "Mettre à jour", class: "btn btn-lg btn-primary"%>
+
+
+<%end%>
+
+<%= link_to "Supprimer mon compte", corsair_path(@corsair), method: :delete , data: { confirm: 'Are you sure?' }, class: "btn btn-lg btn-danger"%>
+<%= link_to "Je ne souhaite plus modifier mon compte", corsairs_path, class: "btn btn-lg btn-success"%>

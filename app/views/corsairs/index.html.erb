@@ -1,0 +1,19 @@
+<h1>Ces moussaillons nous ont rejoint</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Age</th>
+  </tr>
+
+  <% @corsairs.each do |corsair| %>
+    <tr>
+      <td><%= corsair.firstname %></td>
+      <td><%= corsair.age %></td>
+      <td><%= link_to "Voir" , corsair_path(corsair) %> </td>
+      
+    </tr>
+  <% end %>
+</table>
+</br>
+<%= link_to "S'inscrire" , new_corsair_path, class: "btn btn-lg btn-primary" %>

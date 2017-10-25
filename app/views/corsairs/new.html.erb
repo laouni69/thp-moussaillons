@@ -1,0 +1,13 @@
+<h1>Inscription</h1>
+
+<%=form_tag (corsairs_path) do %>
+  
+<%= label_tag 'firstname', 'Firstname:'%>
+<%= text_field_tag 'corsair[firstname]'%>
+
+<%= label_tag 'age', 'Age:'%>
+<%= text_field_tag 'corsair[age]'%>
+
+<%= submit_tag "Je m'inscris"%>
+
+<%end%>
